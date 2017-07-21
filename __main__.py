@@ -1,5 +1,5 @@
 import sys
-import pic2text
+from pic2text import pic2text
 import argparse
 
 def main(args=None):

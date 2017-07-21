@@ -67,7 +67,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path", help="str path to picture eg: --path './path/to/pic.jpg'", default="./pic.jpg")
-    parser.add_argument("--scale", help="0-1 new scale (.2 is not 20% less)", default=.4)
+    parser.add_argument("--path", help="str path to picture eg: --path './path/to/pic.jpg'", default="./pic.png", type=str)
+    parser.add_argument("--scale", help="0-1 new scale (.2 is not 20% less)", default=.4, type=float)
     args = parser.parse_args()
     main(args)

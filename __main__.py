@@ -26,6 +26,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--path", help="str path to picture eg: --path './path/to/pic.jpg'", default="/tmp/pic2text.png", type=str)
     parser.add_argument("--scale", help="0-1 new scale (.2 is not 20% less)", default=.4, type=float)
-    parser.add_argument("--link", help="-link", type=str, default="https://unsplash.it/400/600/?random")
+    parser.add_argument("--link", help="-link", default="https://unsplash.it/400/600/?random", type=str)
     args = parser.parse_args()
     main(args)

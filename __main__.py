@@ -15,6 +15,7 @@ def main(args=None):
         with open('/tmp/pic2text-img.png', 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)
         del response
+        converter.convert('/tmp/pic2text-img.png', args.scale)
     else:
         converter.convert(args.path, args.scale)
     

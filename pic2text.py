@@ -11,8 +11,10 @@ class Pic_2_Text():
         im = Image.open(image_path, 'r')
         width, height = im.size
         ratio = round(width / height)
-        scaled_height = round(height * scale)
-        print(scaled_height*ratio)
+        try:
+            scaled_height = round(height * scale)
+        except:
+            scaled_height = 1
         im = im.resize((round(scaled_height*ratio), round(scaled_height *.35))) #makes the image look correct in cmd line
         width, height = im.size
         pixel_values = list(im.getdata())
